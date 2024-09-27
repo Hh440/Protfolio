@@ -274,7 +274,7 @@ export function PortfolioComponent() {
         <div className="container mx-auto text-center">
           <h3 className="text-3xl font-bold mb-8">Get in Touch</h3>
           <p className="mb-8">
-            I'm always open to new opportunities and collaborations.
+            I&apos;m always open to new opportunities and collaborations.
           </p>
           <div className="flex justify-center space-x-4">
             <a
