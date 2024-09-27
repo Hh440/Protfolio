@@ -38,7 +38,7 @@ export function PortfolioComponent() {
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnWwWcHpya-SzuqZL8A0EDfnQPpo0Z3BQCCw&s",
       github: "https://github.com/aasiflm10/personal-portfolio",
-      demo: "https://example.com",
+      demo: "https://personal-portfolio-d1953xkpg-aasiflm10s-projects.vercel.app/",
     },
   ];
 
