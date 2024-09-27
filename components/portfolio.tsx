@@ -8,32 +8,36 @@ export function PortfolioComponent() {
   const projects = [
     {
       title: "CineMax",
-      description: "A full-stack e-commerce solution with React and Node.js",
-      image: "/placeholder.svg?height=200&width=300",
-      github: "https://github.com",
-      demo: "https://example.com",
+      description: "Watch Movies in your nearest Theatres",
+      image:
+        "https://mars-images.imgix.net/seobot/filmgrail.com/658b734b896bdc25cc352d2c-ebc572d118c7b561e128d60c083a1e7a.png?auto=compress",
+      github: "https://github.com/Hh440/CineMax",
+      demo: "https://cine-max-bg33.vercel.app/",
     },
     {
-      title: "Task Management App",
+      title: "Lumin",
+      description: "A FullStack blogging Application. Write your first blog...",
+      image:
+        "https://c8.alamy.com/comp/ERMBBJ/blogging-website-and-internet-concept-banner-with-blog-word-sign-on-ERMBBJ.jpg",
+      github: "https://github.com/aasiflm10/Lumin",
+      demo: "https://github.com/aasiflm10/Lumin",
+    },
+    {
+      title: "Solana-Play",
       description:
-        "A React-based task manager with drag-and-drop functionality",
-      image: "/placeholder.svg?height=200&width=300",
-      github: "https://github.com",
-      demo: "https://example.com",
-    },
-    {
-      title: "Weather Dashboard",
-      description: "Real-time weather app using OpenWeatherMap API",
-      image: "/placeholder.svg?height=200&width=300",
-      github: "https://github.com",
-      demo: "https://example.com",
+        "Real-time Dapp on Solana Blockchain. See Balance, Airdrop SOL, Create Token and do many more.",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLV84rSWF6F71mUfjkMETbLDCPErOMYAHVjQ&s",
+      github: "https://github.com/aasiflm10/Solana-play",
+      demo: "https://solana-play-nine.vercel.app/",
     },
     {
       title: "Portfolio Website",
       description:
-        "A responsive portfolio website built with React and Tailwind CSS",
-      image: "/placeholder.svg?height=200&width=300",
-      github: "https://github.com",
+        "A responsive portfolio website built with Nextjs, React and Tailwind CSS",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnWwWcHpya-SzuqZL8A0EDfnQPpo0Z3BQCCw&s",
+      github: "https://github.com/aasiflm10/personal-portfolio",
       demo: "https://example.com",
     },
   ];
@@ -170,7 +174,7 @@ export function PortfolioComponent() {
             Aasif Ali
           </h2>
           <p className="text-xl md:text-3xl mb-8 text-dark dark:text-light">
-            Full Stack Developer
+            Full Stack Web Developer
           </p>
           <p className="max-w-2xl mx-auto text-dark dark:text-light text-lg md:text-xl mb-8">
             Passionate about creating elegant, efficient, and user-friendly web
@@ -203,6 +207,8 @@ export function PortfolioComponent() {
               "Git",
               "AWS",
               "Docker",
+              "Web3",
+              "Solana",
             ].map((skill) => (
               <div
                 key={skill}
@@ -216,24 +222,6 @@ export function PortfolioComponent() {
       </section>
 
       {/* Projects Section */}
-      {/* <section id="projects" className="py-16 px-4 pt-24">
-        <div className="container mx-auto">
-          <h3 className="text-3xl font-bold mb-8 text-center">Projects</h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              { title: 'E-commerce Platform', description: 'A full-stack e-commerce solution with React and Node.js' },
-              { title: 'Task Management App', description: 'A React-based task manager with drag-and-drop functionality' },
-              { title: 'Weather Dashboard', description: 'Real-time weather app using OpenWeatherMap API' },
-              { title: 'Portfolio Website', description: 'A responsive portfolio website built with React and Tailwind CSS' }
-            ].map((project, index) => (
-              <div key={index} className="bg-light-secondary dark:bg-dark-secondary rounded-lg p-6 transition-colors duration-300">
-                <h4 className="text-xl font-bold mb-2">{project.title}</h4>
-                <p className="text-dark dark:text-light opacity-80">{project.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
       <section id="projects" className="py-16 px-4 pt-24">
         <div className="container mx-auto">
           <h3 className="text-3xl font-bold mb-8 text-center">Projects</h3>
@@ -246,7 +234,7 @@ export function PortfolioComponent() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-60 object-cover"
                 />
                 <div className="p-6">
                   <h4 className="text-xl font-bold mb-2">{project.title}</h4>
@@ -290,7 +278,7 @@ export function PortfolioComponent() {
           </p>
           <div className="flex justify-center space-x-4">
             <a
-              href="https://github.com"
+              href="https://github.com/aasiflm10"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary"
@@ -311,7 +299,7 @@ export function PortfolioComponent() {
               </svg>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/aasif-ali-a58638229/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary"
@@ -333,7 +321,10 @@ export function PortfolioComponent() {
                 <circle cx="4" cy="4" r="2"></circle>
               </svg>
             </a>
-            <a href="mailto:john@example.com" className="hover:text-primary">
+            <a
+              href="mailto:aasifchamp123@gmail.com"
+              className="hover:text-primary"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
