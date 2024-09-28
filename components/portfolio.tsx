@@ -38,7 +38,7 @@ export function PortfolioComponent() {
       image:
         "https://www.dreamhost.com/blog/wp-content/smush-webp/2023/01/Photography-Portfolio-Site-Feature-730x485.jpg.webp",
       github: "https://github.com/aasiflm10/personal-portfolio",
-      demo: "https://personal-portfolio-d1953xkpg-aasiflm10s-projects.vercel.app/",
+      demo: "https://protfolio-nine-gamma.vercel.app/",
     },
   ];
 
