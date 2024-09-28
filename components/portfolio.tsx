@@ -15,28 +15,28 @@ export function PortfolioComponent() {
       demo: "https://cine-max-bg33.vercel.app/",
     },
     {
-      title: "Lumin",
+      title: "Zenith",
       description: "A FullStack blogging Application. Write your first blog...",
       image:
         "https://c8.alamy.com/comp/ERMBBJ/blogging-website-and-internet-concept-banner-with-blog-word-sign-on-ERMBBJ.jpg",
-      github: "https://github.com/aasiflm10/Lumin",
-      demo: "https://github.com/aasiflm10/Lumin",
+      github: "https://github.com/Hh440/Zenith.git",
+      demo: "https://github.com/Hh440/Zenith.git",
     },
     {
-      title: "Solana-Play",
+      title: "SolUtili",
       description:
         "Real-time Dapp on Solana Blockchain. See Balance, Airdrop SOL, Create Token and do many more.",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLV84rSWF6F71mUfjkMETbLDCPErOMYAHVjQ&s",
-      github: "https://github.com/aasiflm10/Solana-play",
-      demo: "https://solana-play-nine.vercel.app/",
+        "https://tk-storage.s3.ap-southeast-1.amazonaws.com/host/ckeditor/Solanacircle_20231222072329.jpeg",
+      github: "https://github.com/Hh440/solutili.git",
+      demo: "https://delieli.vercel.app/",
     },
     {
       title: "Portfolio Website",
       description:
         "A responsive portfolio website built with Nextjs, React and Tailwind CSS",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnWwWcHpya-SzuqZL8A0EDfnQPpo0Z3BQCCw&s",
+        "https://www.dreamhost.com/blog/wp-content/smush-webp/2023/01/Photography-Portfolio-Site-Feature-730x485.jpg.webp",
       github: "https://github.com/aasiflm10/personal-portfolio",
       demo: "https://personal-portfolio-d1953xkpg-aasiflm10s-projects.vercel.app/",
     },
@@ -89,7 +89,7 @@ export function PortfolioComponent() {
       {/* Header */}
       <header className="fixed w-full bg-light-secondary dark:bg-dark-secondary bg-opacity-90 shadow-md z-10 transition-colors duration-300">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Aasif Ali</h1>
+          <h1 className="text-2xl font-bold">Harsh</h1>
           <div className="flex items-center space-x-4">
             <nav className="hidden md:flex space-x-4">
               <a href="#home" className="hover:text-primary">
@@ -171,7 +171,7 @@ export function PortfolioComponent() {
       >
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-5xl md:text-7xl font-bold mb-4 text-primary">
-            Aasif Ali
+            Harsh
           </h2>
           <p className="text-xl md:text-3xl mb-8 text-dark dark:text-light">
             Full Stack Web Developer
@@ -199,13 +199,13 @@ export function PortfolioComponent() {
           <h3 className="text-3xl font-bold mb-8 text-center">Skills</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              "JavaScript",
+              "Java",
               "React",
               "Node.js",
-              "Python",
+              "JavaScript",
               "SQL",
               "Git",
-              "AWS",
+              "Three js",
               "Docker",
               "Web3",
               "Solana",
@@ -348,7 +348,7 @@ export function PortfolioComponent() {
       {/* Footer */}
       <footer className="bg-light dark:bg-dark py-8 px-4 transition-colors duration-300">
         <div className="container mx-auto text-center text-dark dark:text-light opacity-80">
-          <p>&copy; 2024 Aasif Ali. All rights reserved.</p>
+          <p>&copy; 2024 Harsh. All rights reserved.</p>
         </div>
       </footer>
     </div>
