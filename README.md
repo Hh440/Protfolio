@@ -1,37 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Developer Portfolio
 
-## Getting Started
+Welcome to my developer portfolio! This project showcases various personal and professional projects I’ve worked on, demonstrating my skills in web development, blockchain, and 3D graphics. The portfolio includes interactive animations, blockchain utilities, and innovative web applications.
 
-First, run the development server:
+## 🛠️ Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Frontend**: 
+  - Next.js (React framework)
+  - TypeScript
+  - Tailwind CSS
+- **Backend**:
+  - Node.js
+  - Prisma (ORM for database management)
+  - PostgreSQL (Database)
+- **Blockchain**:
+  - Solana (SPL Tokens, Wallet creation, and transfer)
+  - Metaplex Token Metadata Program
+- **3D Animations**:
+  - Three.js (3D modeling and physics logic)
+  - GLTF models for 3D assets
+- **Other Libraries**:
+  - @fractalwagmi/solana-wallet-adapter
+  - @solana/wallet-adapter-wallets
+  - class-variance-authority for managing UI variants
+  - sharp (for image processing in Next.js)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Key Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **CineMax** - A movie ticket booking platform built for StackHack 2.0, featuring theater lists, movie showtimes, and a ticket booking system with discounts and payment integration.
+   
+2. **Zenith** - A FullStack blogging Application. Write your first blog.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. **Solutili** - A web application focused on Solana blockchain utilities, offering token creation, wallet balance management, and liquidity pool operations.
 
-## Learn More
+5. **Interactive Animations** - Includes 3D models like rolling balls with physics, text animations, and camping scenes, all built with Three.js and featured on the GalleryPage.
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Design Philosophy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+I focus on creating visually appealing, user-friendly designs with a cohesive color palette. The interfaces are sleek, interactive, and styled using a combination of Tailwind CSS, Radix UI components, and custom 3D models.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 💻 How to Run Locally
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# personal-portfolio
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/portfolio.git
+   cd portfolio
+   ```
+2. **Install Dependencies**
+   ```bash
+    npm install
+   ```
+3. **Start Development Server**
+   ```bash
+   npm run dev
+   ```
