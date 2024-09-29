@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import {motion} from 'framer-motion'
-import { Scale } from "lucide-react";
+
 
 export function PortfolioComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
