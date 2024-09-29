@@ -1,5 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
+import {motion} from 'framer-motion'
+import { Scale } from "lucide-react";
 
 export function PortfolioComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -210,12 +212,19 @@ export function PortfolioComponent() {
               "Web3",
               "Solana",
             ].map((skill) => (
-              <div
+              <motion.div
+              
+                whileHover={{
+                  scale:1.05,
+                  boxShadow: "0px 4px 20px rgb(7, 111, 115)"
+                }}
+
+                transition={{duration:0.5}}
                 key={skill}
                 className="bg-light dark:bg-dark rounded-lg p-4 text-center transition-colors duration-300"
               >
                 {skill}
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -227,11 +236,15 @@ export function PortfolioComponent() {
           <h3 className="text-3xl font-bold mb-8 text-center">Projects</h3>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <div
+                  <motion.div
+                    whileHover={{
+                      scale:1.05, 
+                    }}
+                    transition={{duration:0.5,bounce:0.5}}
                 key={index}
                 className="bg-light-secondary dark:bg-dark-secondary rounded-lg overflow-hidden shadow-lg transition-colors duration-300"
               >
-                <img
+                <motion.img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-60 object-cover"
@@ -260,7 +273,7 @@ export function PortfolioComponent() {
                     </a>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -278,7 +291,7 @@ export function PortfolioComponent() {
           </p>
           <div className="flex justify-center space-x-4">
             <a
-              href="https://github.com/aasiflm10"
+              href="https://github.com/Hh440"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary"
@@ -299,7 +312,7 @@ export function PortfolioComponent() {
               </svg>
             </a>
             <a
-              href="https://www.linkedin.com/in/aasif-ali-a58638229/"
+              href="https://www.linkedin.com/in/harsh-0422771a7/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary"
@@ -322,7 +335,7 @@ export function PortfolioComponent() {
               </svg>
             </a>
             <a
-              href="mailto:aasifchamp123@gmail.com"
+              href="mailto:harsh100045@gmail.com"
               className="hover:text-primary"
             >
               <svg
