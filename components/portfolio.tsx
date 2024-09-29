@@ -1,11 +1,25 @@
 "use client";
 import { useState, useEffect } from "react";
 import {motion} from 'framer-motion'
-
+import splitStringUsignRegex from "@/utils/splitStringUsingRegex";
 
 export function PortfolioComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
+
+  const name="Harsh"
+  const role="Full Stack Developer"
+  const description="Passionate about creating elegant, efficient, and user-friendly web applications. With expertise in modern web technologies, I bring ideas to life through code."
+
+
+  const nameChar=splitStringUsignRegex(name)
+  const roleChar=splitStringUsignRegex(role)
+  const descriptionChar=splitStringUsignRegex(description)
+
+  const charVariant={
+    hidden:{opacity:0},
+    reveal:{opacity:1}
+  }
 
   const projects = [
     {
@@ -172,17 +186,55 @@ export function PortfolioComponent() {
         className="relative min-h-screen flex items-center justify-center bg-light dark:bg-dark transition-colors duration-300 pt-20"
       >
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-5xl md:text-7xl font-bold mb-4 text-primary">
-            Harsh
-          </h2>
-          <p className="text-xl md:text-3xl mb-8 text-dark dark:text-light">
-            Full Stack Web Developer
-          </p>
-          <p className="max-w-2xl mx-auto text-dark dark:text-light text-lg md:text-xl mb-8">
-            Passionate about creating elegant, efficient, and user-friendly web
-            applications. With expertise in modern web technologies, I bring
-            ideas to life through code.
-          </p>
+          <motion.h2 
+          initial="hidden"
+          whileInView="reveal"
+          variants={charVariant}
+          transition={{staggerChildren: 0.2}}
+          className="text-5xl md:text-7xl font-bold mb-4 text-primary">
+
+            {nameChar.map(char=>(
+              <motion.span
+              key={char}
+              transition={{duration:0.5}} 
+              variants={charVariant}
+              >
+                {char}
+              </motion.span>
+            ))}
+          </motion.h2>
+          <motion.p 
+          initial="hidden"
+          whileInView="reveal"
+          variants={charVariant}
+          transition={{staggerChildren: 0.2}}
+          className="text-xl md:text-3xl mb-8 text-dark dark:text-light">
+            {roleChar.map(char=>(
+              <motion.span
+              key={char}
+              transition={{duration:0.7}}
+              variants={charVariant}
+              >
+                {char}
+              </motion.span>
+            ))}
+          </motion.p>
+          <motion.p 
+          initial="hidden"
+          whileInView="reveal"
+          variants={charVariant}
+          transition={{staggerChildren: 0.02}}
+          className="max-w-2xl mx-auto text-dark dark:text-light text-lg md:text-xl mb-8">
+            {descriptionChar.map(char=>(
+              <motion.span
+              key={char}
+              transition={{duration:0.5}}
+              variants={charVariant}
+              >
+                {char}
+              </motion.span>
+            ))}
+          </motion.p>
           <a
             href="#contact"
             className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-full hover:bg-primary-dark transition duration-300"
