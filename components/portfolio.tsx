@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import {motion} from 'framer-motion'
 import splitStringUsignRegex from "@/utils/splitStringUsingRegex";
+import ThreeText from "./Text3D";
 
 export function PortfolioComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -105,7 +106,9 @@ export function PortfolioComponent() {
       {/* Header */}
       <header className="fixed w-full bg-light-secondary dark:bg-dark-secondary bg-opacity-90 shadow-md z-10 transition-colors duration-300">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Harsh</h1>
+          <div className="h-10">
+          <ThreeText/>
+          </div>
           <div className="flex items-center space-x-4">
             <nav className="hidden md:flex space-x-4">
               <a href="#home" className="hover:text-primary">
@@ -207,7 +210,7 @@ export function PortfolioComponent() {
           initial="hidden"
           whileInView="reveal"
           variants={charVariant}
-          transition={{staggerChildren: 0.2}}
+          transition={{staggerChildren: 0.1}}
           className="text-xl md:text-3xl mb-8 text-dark dark:text-light">
             {roleChar.map(char=>(
               <motion.span
