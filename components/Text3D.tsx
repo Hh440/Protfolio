@@ -1,7 +1,7 @@
 import { Text3D,Float } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
-import { useEffect, useState ,Suspense} from "react"
-import * as THREE from "three"
+import { Suspense} from "react"
+
 
 
 const ThreeText=()=>{
