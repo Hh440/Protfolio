@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import {motion} from 'framer-motion'
 import splitStringUsignRegex from "@/utils/splitStringUsingRegex";
 import ThreeText from "./Text3D";
+import TextSimple from "./TextSimple";
 
 export function PortfolioComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -107,7 +108,9 @@ export function PortfolioComponent() {
       <header className="fixed w-full bg-light-secondary dark:bg-dark-secondary bg-opacity-90 shadow-md z-10 transition-colors duration-300">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="h-10">
-          <ThreeText/>
+            {
+             isDarkMode? <ThreeText/>:<TextSimple/>
+            }
           </div>
           <div className="flex items-center space-x-4">
             <nav className="hidden md:flex space-x-4">
@@ -124,12 +127,26 @@ export function PortfolioComponent() {
                 Contact
               </a>
             </nav>
-            <button
+            <motion.button
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-light dark:bg-dark text-dark dark:text-light"
+              className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out"
+              whileHover={{
+                scale: 1.1, 
+              }}
+              whileTap={{ scale: 0.9 }}  
             >
-              {isDarkMode ? "🌞" : "🌙"}
-            </button>
+              <motion.span
+                animate={{
+                  rotate: isDarkMode ? 360 : 0,  
+                }}
+                transition={{
+                  duration: 0.5,  
+                  ease: "easeInOut",
+                }}
+              >
+                {isDarkMode ? "🌞" : "🌙"}
+              </motion.span>
+            </motion.button>
             <button onClick={toggleMenu} className="md:hidden">
               {isMenuOpen ? (
                 <svg
@@ -238,12 +255,28 @@ export function PortfolioComponent() {
               </motion.span>
             ))}
           </motion.p>
-          <a
+          <motion.a
+
+          style={{
+            background: 'linear-gradient(90deg, #6a11cb 0%, #2575fc 100%)',  // Gradient background
+            boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.2)',  // Shadow effect
+          }}
+           animate={
+            {opacity:[1,0.5,0,1],
+              scale:[1,1.1,1]
+            }          
+          }
+
+          transition={{
+            duration: 20,  // Time for one complete blink
+            repeat: Infinity,  // Loop the animation infinitely
+            ease: "easeInOut",  // Smoother transition between states
+          }}
             href="#contact"
-            className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-full hover:bg-primary-dark transition duration-300"
+            className="inline-block bg-primary text-white font-bold py-3 px-6  hover:bg-primary-dark transition duration-300"
           >
             Get in Touch
-          </a>
+          </motion.a>
         </div>
       </section>
 

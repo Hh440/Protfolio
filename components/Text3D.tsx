@@ -12,20 +12,25 @@ const ThreeText=()=>{
             <ambientLight intensity={0.5}/>
             <directionalLight position={[0, 0, 5]} />
             <Suspense>
-               <Float floatIntensity={1}>
+               <Float 
+                rotationIntensity={0.5}  
+                floatIntensity={0.5}  
+                floatingRange={[0, 0.1]}  
+        >
                     <Text3D
                     font={'font/fontwrite.json'}
                     scale={2.5}
                     height={1}
-                    position={[-11,-1,0]}
+                    position={[-9,-1.4,0]}
                     curveSegments={22}
                     bevelEnabled
                     bevelSize={0.02} 
                     bevelOffset={0} 
                     bevelSegments={5} 
+                    
                     >
-                        Harsh
-                        <meshStandardMaterial attach="material" color="#8C92A1"/>
+                        HARSH
+                        <meshStandardMaterial attach="material" color="#4169E1"/>
 
 
 
