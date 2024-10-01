@@ -1,7 +1,7 @@
 ;import { Canvas } from "@react-three/fiber";
 import {  Suspense } from "react";
 import Model from "./Model";
-import { Environment, OrbitControls, Sky } from "@react-three/drei";
+import { Environment, OrbitControls } from "@react-three/drei";
 
 
 const Bot =()=>{
