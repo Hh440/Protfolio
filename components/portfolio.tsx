@@ -4,6 +4,7 @@ import {motion} from 'framer-motion'
 import splitStringUsignRegex from "@/utils/splitStringUsingRegex";
 import ThreeText from "./Text3D";
 import TextSimple from "./TextSimple";
+import Bot from "@/app/component/Bot";
 
 export function PortfolioComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -277,6 +278,8 @@ export function PortfolioComponent() {
           >
             Get in Touch
           </motion.a>
+
+          <Bot/>
         </div>
       </section>
 
