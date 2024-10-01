@@ -203,85 +203,88 @@ export function PortfolioComponent() {
 
       {/* Hero Section */}
       <section
-        id="home"
-        className="relative min-h-screen flex items-center justify-center bg-light dark:bg-dark transition-colors duration-300 pt-20"
+  id="home"
+  className="relative min-h-screen flex items-center justify-between bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:bg-dark transition-colors duration-300 pt-20"
+>
+  <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between space-y-10 md:space-y-0">
+    {/* Text Content */}
+    <div className="text-center md:text-left md:w-1/2 space-y-6">
+      <motion.h2
+        initial="hidden"
+        whileInView="reveal"
+        variants={charVariant}
+        transition={{ staggerChildren: 0.2 }}
+        className="text-6xl md:text-8xl font-extrabold mb-4 text-white tracking-wide leading-tight"
       >
-        <div className="container mx-auto px-4 text-center">
-          <motion.h2 
-          initial="hidden"
-          whileInView="reveal"
-          variants={charVariant}
-          transition={{staggerChildren: 0.2}}
-          className="text-5xl md:text-7xl font-bold mb-4 text-primary">
+        {nameChar.map((char) => (
+          <motion.span key={char} transition={{ duration: 0.5 }} variants={charVariant}>
+            {char}
+          </motion.span>
+        ))}
+      </motion.h2>
 
-            {nameChar.map(char=>(
-              <motion.span
-              key={char}
-              transition={{duration:0.5}} 
-              variants={charVariant}
-              >
-                {char}
-              </motion.span>
-            ))}
-          </motion.h2>
-          <motion.p 
-          initial="hidden"
-          whileInView="reveal"
-          variants={charVariant}
-          transition={{staggerChildren: 0.1}}
-          className="text-xl md:text-3xl mb-8 text-dark dark:text-light">
-            {roleChar.map(char=>(
-              <motion.span
-              key={char}
-              transition={{duration:0.7}}
-              variants={charVariant}
-              >
-                {char}
-              </motion.span>
-            ))}
-          </motion.p>
-          <motion.p 
-          initial="hidden"
-          whileInView="reveal"
-          variants={charVariant}
-          transition={{staggerChildren: 0.02}}
-          className="max-w-2xl mx-auto text-dark dark:text-light text-lg md:text-xl mb-8">
-            {descriptionChar.map(char=>(
-              <motion.span
-              key={char}
-              transition={{duration:0.5}}
-              variants={charVariant}
-              >
-                {char}
-              </motion.span>
-            ))}
-          </motion.p>
-          <motion.a
+      <motion.p
+        initial="hidden"
+        whileInView="reveal"
+        variants={charVariant}
+        transition={{ staggerChildren: 0.1 }}
+        className="text-2xl md:text-4xl mb-8 text-white dark:text-light font-medium"
+      >
+        {roleChar.map((char) => (
+          <motion.span key={char} transition={{ duration: 0.7 }} variants={charVariant}>
+            {char}
+          </motion.span>
+        ))}
+      </motion.p>
 
-          style={{
-            background: 'linear-gradient(90deg, #6a11cb 0%, #2575fc 100%)',  // Gradient background
-            boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.2)',  // Shadow effect
-          }}
-           animate={
-            {opacity:[1,0.5,0,1],
-              scale:[1,1.1,1]
-            }          
-          }
+      <motion.p
+        initial="hidden"
+        whileInView="reveal"
+        variants={charVariant}
+        transition={{ staggerChildren: 0.02 }}
+        className="max-w-2xl mx-auto md:mx-0 text-white dark:text-light text-lg md:text-2xl mb-8 leading-relaxed"
+      >
+        {descriptionChar.map((char) => (
+          <motion.span key={char} transition={{ duration: 0.5 }} variants={charVariant}>
+            {char}
+          </motion.span>
+        ))}
+      </motion.p>
 
-          transition={{
-            duration: 20,  // Time for one complete blink
-            repeat: Infinity,  // Loop the animation infinitely
-            ease: "easeInOut",  // Smoother transition between states
-          }}
-            href="#contact"
-            className="inline-block bg-primary text-white font-bold py-3 px-6  hover:bg-primary-dark transition duration-300"
-          >
-            Get in Touch
-          </motion.a>
+      <motion.a
+        style={{
+          background: 'linear-gradient(90deg, #ff512f 0%, #dd2476 100%)',
+          boxShadow: '0px 8px 20px rgba(255, 105, 180, 0.6)',
+        }}
+        animate={{
+          opacity: [1, 0.5, 0, 1],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+        href="#contact"
+        className="inline-block bg-primary text-white font-bold py-4 px-8 rounded-lg hover:bg-pink-700 transition duration-300 transform hover:scale-105"
+      >
+        Get in Touch
+      </motion.a>
+    </div>
 
-          <Bot/>
-        </div>
-      </section>
+    {/* Bot Component */}
+    <motion.div
+      className="md:w-1/2 flex justify-center md:justify-end h-[750px]"  // Height increased to 600px
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <Bot />
+    </motion.div>
+  </div>
+</section>
+
+
 
       {/* Skills Section */}
       <section

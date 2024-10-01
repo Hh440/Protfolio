@@ -8,7 +8,10 @@ const Bot =()=>{
     return(
         <Canvas shadows camera={{position:[0,0,20], fov:75}} gl={{antialias:true}}>
           
-            <OrbitControls/>
+            <OrbitControls
+             enableZoom={false}
+             enableDamping={true}
+            />
             <ambientLight intensity={1}/>
             <Suspense>
                 <Model/>
