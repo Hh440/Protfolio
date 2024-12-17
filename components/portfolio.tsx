@@ -277,7 +277,7 @@ export function PortfolioComponent() {
 
     {/* Bot Component */}
     <motion.div
-      className="md:w-1/2 flex justify-center md:justify-end bg-red-950 h-[850px] border  shadow-md shadow-blue-600"  // Height increased to 600px   
+      className="md:w-1/2 flex justify-center md:justify-end bg-red-950 h-[850px]"  
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -323,7 +323,7 @@ export function PortfolioComponent() {
                   delay: index * 0.8, 
                 }}
                 key={index}
-                className="bg-light dark:bg-dark w-96 rounded-lg p-4 text-center transition-colors duration-300 font-Aus text-xl"
+                className="bg-light dark:bg-dark w-96 rounded-lg p-4 text-center transition-colors duration-300 font-Aus text-lg"
 
               >
                 
