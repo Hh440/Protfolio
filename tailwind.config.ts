@@ -25,6 +25,9 @@ const config: Config = {
       animation: {
         "gradient-shift": "gradient-shift 8s ease infinite",
       },
+      fontFamily:{
+        Aus:['Playwrite Australia NSW Guides']
+      }
     },
     colors: {
       border: "hsl(var(--border))",

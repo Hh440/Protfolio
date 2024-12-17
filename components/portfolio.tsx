@@ -25,16 +25,7 @@ export function PortfolioComponent() {
   }
 
 
-  const skills=[
-    {
-      name:"Java",
-      url:""
-    },{
-      name:"Web3",
-      url:""
-
-    }
-  ]
+ 
 
   const projects = [
     {
@@ -216,7 +207,7 @@ export function PortfolioComponent() {
       {/* Hero Section */}
       <section
   id="home"
-  className="relative min-h-screen flex items-center justify-between bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:bg-dark transition-colors duration-300 pt-20"
+  className="relative min-h-screen flex items-center justify-between bg-gradient-to-r from-blue-500 via-purple-500 to-sky-500 dark:bg-dark transition-colors duration-300 pt-20"
 >
   <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between space-y-10 md:space-y-0">
     {/* Text Content */}
@@ -303,7 +294,7 @@ export function PortfolioComponent() {
         id="skills"
         className="py-16 bg-light-secondary dark:bg-dark-secondary px-4 transition-colors duration-300 pt-24"
       >
-        <div className="container mx-auto">
+        <div className="container mx-auto max-w-full">
           <h3 className="text-3xl font-bold mb-8 text-center">Skills</h3>
           <div className="flex  gap-8 relative overflow-hidden">
             {[
@@ -317,6 +308,7 @@ export function PortfolioComponent() {
               "Docker",
               "Web3",
               "Solana",
+              "Solidity"
             ].map((skill,index) => (
               <motion.div
               
@@ -326,13 +318,12 @@ export function PortfolioComponent() {
 
                 transition={{
                   duration: 10,
-                  ease:"spring",
                   repeat: Infinity,
                   repeatType: "loop",
                   delay: index * 0.8, 
                 }}
-                key={skill}
-                className="bg-light dark:bg-dark w-96 rounded-lg p-4 text-center transition-colors duration-300"
+                key={index}
+                className="bg-light dark:bg-dark w-96 rounded-lg p-4 text-center transition-colors duration-300 font-Aus text-xl"
 
               >
                 
