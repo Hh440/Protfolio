@@ -24,6 +24,18 @@ export function PortfolioComponent() {
     reveal:{opacity:1}
   }
 
+
+  const skills=[
+    {
+      name:"Java",
+      url:""
+    },{
+      name:"Web3",
+      url:""
+
+    }
+  ]
+
   const projects = [
     {
       title: "CineMax",
@@ -274,7 +286,7 @@ export function PortfolioComponent() {
 
     {/* Bot Component */}
     <motion.div
-      className="md:w-1/2 flex justify-center md:justify-end h-[750px]"  // Height increased to 600px
+      className="md:w-1/2 flex justify-center md:justify-end bg-red-950 h-[850px] border  shadow-md shadow-blue-600"  // Height increased to 600px   
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -293,7 +305,7 @@ export function PortfolioComponent() {
       >
         <div className="container mx-auto">
           <h3 className="text-3xl font-bold mb-8 text-center">Skills</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="flex  gap-8 relative overflow-hidden">
             {[
               "Java",
               "React",
@@ -305,19 +317,29 @@ export function PortfolioComponent() {
               "Docker",
               "Web3",
               "Solana",
-            ].map((skill) => (
+            ].map((skill,index) => (
               <motion.div
               
-                whileHover={{
-                  scale:1.05,
-                  boxShadow: "0px 4px 20px rgb(7, 111, 115)"
-                }}
+                
+                initial={{ x: "-100%" }}
+                animate={{ x: "100%"}}
 
-                transition={{duration:0.5}}
+                transition={{
+                  duration: 10,
+                  ease:"spring",
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  delay: index * 0.8, 
+                }}
                 key={skill}
-                className="bg-light dark:bg-dark rounded-lg p-4 text-center transition-colors duration-300"
+                className="bg-light dark:bg-dark w-96 rounded-lg p-4 text-center transition-colors duration-300"
+
               >
+                
                 {skill}
+
+               
+                
               </motion.div>
             ))}
           </div>
