@@ -314,10 +314,10 @@ export function PortfolioComponent() {
               
                 
                 initial={{ x: "-100%" }}
-                animate={{ x: "100%"}}
+                animate={{ x: "300%"}}
 
                 transition={{
-                  duration: 10,
+                  duration: 30,
                   repeat: Infinity,
                   repeatType: "loop",
                   delay: index * 0.8, 
